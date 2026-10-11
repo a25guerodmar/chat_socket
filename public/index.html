@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xat en temps real</title>
+</head>
+
+<body>
+
+    <h1>Xat en temps real</h1>
+
+    <form id="form">
+
+        <input
+            type="text"
+            id="nom"
+            placeholder="El teu nom"
+            maxlength="20"
+            required
+        >
+
+        <input
+            type="text"
+            id="text"
+            placeholder="Escriu un missatge"
+            maxlength="500"
+            required
+        >
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <h2>Missatges</h2>
+
+    <ul id="messages"></ul>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+
+</body>
+
+</html>
