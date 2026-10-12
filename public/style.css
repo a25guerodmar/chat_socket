@@ -1,0 +1,110 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px 15px;
+    color: #E8E5DF;
+}
+
+.contenidor {
+    max-width: 650px;
+    margin: auto;
+    padding: 25px;
+    background-color: #2D3A3A;
+    border: 1px solid #52615B;
+    border-radius: 12px;
+}
+
+h1 {
+    text-align: center;
+    color: #E9C46A;
+}
+
+.capcalera {
+    background-color: #414A35;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #E9C46A;
+}
+
+.capcalera h1 {
+    margin-top: 0;
+}
+
+.capcalera p {
+    margin: 8px 0;
+}
+
+.zona-missatges {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #52615B;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #253131;
+}
+
+#messages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#messages li {
+    background-color: #3B4B47;
+    border-left: 3px solid #D9A441;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow-wrap: anywhere;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 11px;
+    background-color: #F0EDE5;
+    color: #263333;
+    border: 1px solid #B7B7A4;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #E9C46A;
+}
+
+button {
+    padding: 10px 16px;
+    background-color: #C27B55;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #A96040;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .contenidor {
+        padding: 15px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+}

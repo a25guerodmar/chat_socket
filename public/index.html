@@ -5,37 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xat en temps real</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Xat en temps real</h1>
+    <main class="contenidor">
 
-    <form id="form">
+        <!-- Entrada al chat -->
+        <section id="form-entrada-contenidor">
+            <h1>Xat en temps real</h1>
 
-        <input
-            type="text"
-            id="nom"
-            placeholder="El teu nom"
-            maxlength="20"
-            required
-        >
+            <form id="form-entrada">
+                <input
+                    type="text"
+                    id="nom"
+                    placeholder="El teu nom"
+                    maxlength="20"
+                    required
+                >
+                <button type="submit">Entrar al xat</button>
+            </form>
+        </section>
 
-        <input
-            type="text"
-            id="text"
-            placeholder="Escriu un missatge"
-            maxlength="500"
-            required
-        >
+        <!-- Interfície del xat -->
+        <section id="chat" hidden>
 
-        <button type="submit">Enviar</button>
+            <!-- Capçalera -->
+            <header class="capcalera">
+                <h1>Xat en temps real</h1>
+                <p id="nom-usuari"></p>
+                <p>Estat: <span id="estat-connexio">Connectant...</span></p>
+            </header>
 
-    </form>
+            <!-- Zona de missatges -->
+            <div class="zona-missatges">
+                <ul id="messages"></ul>
+            </div>
 
-    <h2>Missatges</h2>
+            <!-- Formulari per enviar missatges -->
+            <form id="form">
+                <input
+                    type="text"
+                    id="text"
+                    placeholder="Escriu un missatge"
+                    maxlength="500"
+                    required
+                >
+                <button type="submit">Enviar</button>
+            </form>
 
-    <ul id="messages"></ul>
+        </section>
+
+    </main>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="client.js"></script>
